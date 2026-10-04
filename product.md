@@ -91,7 +91,16 @@ This hardware has not been presented as flight-qualified or safety-rated. Valida
 - [PCB isometric 3D render](docs/images/pcb-3d-angle.png)
 - [PCB reverse-side 3D render](docs/images/pcb-3d-back.png)
 - [Board STEP assembly](docs/3d/ESP32-C6-CAN.step)
+- [Enclosure-only STEP](docs/3d/ESP32-C6-CAN-enclosure.step)
+- [Board-in-enclosure STEP assembly](docs/3d/ESP32-C6-CAN-enclosed-assembly.step)
+- [Enclosure generator](docs/3d/design_enclosure.py)
 - [Hardware block diagram](docs/diagrams/hardware-block-diagram.svg)
 - [System architecture](docs/diagrams/system-architecture.svg)
 - [CAN interface](docs/diagrams/can-interface.svg)
 - [Telemetry data flow](docs/diagrams/telemetry-data-flow.svg)
+
+## Enclosure Prototype
+
+The current CadQuery concept is a 48 x 33 x 13 mm two-piece enclosure. Its openings follow the actual board STEP connector bodies, including USB-C, CAN, UART, I2C, the MicroSD / external-SPI edge, and a U.FL cable pass-through. The board has one actual H1 mounting hole in the supplied PCB/STEP, so the concept uses that hole plus two side supports and matching lid keepers; no additional PCB holes are presumed.
+
+The CAD generator verifies that the base and lid solids do not intersect the imported board model. This is a software geometry check, not physical tolerance verification. The enclosure has not been 3D-printed or fit-tested; validate wall clearance, cable insertion/removal, screw choice, material, heat, RF effects, and service access before using it in a vehicle.

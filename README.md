@@ -155,7 +155,11 @@ Values above are taken from the schematic, PCB, and project stackup. They are no
 |   |-- packages3d/
 |   `-- symbol/
 `-- docs/
-    |-- 3d/ESP32-C6-CAN.step
+  |-- 3d/
+  |   |-- ESP32-C6-CAN.step
+  |   |-- ESP32-C6-CAN-enclosure.step
+  |   |-- ESP32-C6-CAN-enclosed-assembly.step
+  |   `-- design_enclosure.py
     |-- diagrams/
     `-- images/
 ```
@@ -165,6 +169,20 @@ The KiCad project names are preserved. Custom ESP32-C6 footprint and symbol asse
 ## 3D CAD Model
 
 [Download the board assembly STEP model](docs/3d/ESP32-C6-CAN.step). It was exported from the supplied KiCad PCB and available 3D models. Component coverage depends on the 3D models present in the design; the STEP file is a design visualization, not a mechanical tolerance model.
+
+### Enclosure Prototype
+
+The enclosure is a parametric, two-piece prototype sized around the supplied board STEP. The base has side openings for USB-C, the CAN and UART headers, I2C, and the combined MicroSD / external-SPI end. A top pass-through is aligned with the board's U.FL connector. The board rests on two modeled edge supports and its existing H1 hole; two lid keepers constrain the opposite board edge. No new PCB holes are assumed.
+
+<p align="center">
+  <img src="docs/images/enclosure-preview.png" width="750" alt="Exploded preview of the enclosure prototype around the actual PCB STEP assembly">
+</p>
+
+- [Enclosure-only STEP](docs/3d/ESP32-C6-CAN-enclosure.step)
+- [Board-in-enclosure STEP assembly](docs/3d/ESP32-C6-CAN-enclosed-assembly.step)
+- [Editable CadQuery generator](docs/3d/design_enclosure.py)
+
+The current concept measures 48 x 33 x 13 mm overall. It is a geometry-checked prototype, not a manufacturing release: print tolerances, screw selection, heat dissipation, connector/cable access, RF performance, and fit under real components still need physical validation. The generator checks that the modeled base and lid do not intersect the supplied board STEP; that check is not a fit or reliability qualification.
 
 Editable diagrams are in [`docs/diagrams/`](docs/diagrams/): [system architecture](docs/diagrams/system-architecture.svg), [CAN interface](docs/diagrams/can-interface.svg), [hardware block diagram](docs/diagrams/hardware-block-diagram.svg), and [telemetry data flow](docs/diagrams/telemetry-data-flow.svg).
 

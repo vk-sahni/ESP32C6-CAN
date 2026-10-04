@@ -44,9 +44,13 @@ kicad-cli pcb render --output /tmp/ESP32-C6FH4-render.png \
 
 kicad-cli pcb export step --output /tmp/ESP32-C6FH4.step \
   --include-tracks --include-pads ESP32-C6FH4.kicad_pcb
+
+python docs/3d/design_enclosure.py
 ```
 
 Review warnings and errors rather than treating a successful command exit as proof that the board is fabrication-ready.
+
+The enclosure script imports `docs/3d/ESP32-C6-CAN.step`, builds a base and lid, checks each solid against the imported board assembly, and writes `ESP32-C6-CAN-enclosure.step` plus `ESP32-C6-CAN-enclosed-assembly.step`. It requires CadQuery 2.8 and its OpenCascade kernel. The geometry guard checks solid intersection only; it does not model print tolerances or verify physical fit.
 
 ## Current Validation Record
 

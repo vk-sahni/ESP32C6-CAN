@@ -526,7 +526,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "ESP32-C6FH4.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

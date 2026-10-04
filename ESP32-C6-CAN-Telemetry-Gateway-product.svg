@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2400" height="1600" viewBox="0 0 2400 1600">
+  <defs>
+    <style>
+      .label { font-family: Arial, sans-serif; fill: #f4f6f5; font-size: 21px; font-weight: 700; }
+      .detail { font-family: Arial, sans-serif; fill: #b8c5c8; font-size: 16px; font-weight: 400; }
+      .leader { fill: none; stroke: #8fc8c5; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.92; }
+      .dot { fill: #a8d8d2; stroke: #24343a; stroke-width: 3; }
+    </style>
+  </defs>
+  <rect width="2400" height="1600" fill="#252e33"/>
+  <path d="M0 0H2400V1600H0Z" fill="#39454a" fill-opacity="0.16"/>
+  <path d="M0 288H2400" stroke="#859398" stroke-opacity="0.25"/>
+  <path d="M0 1512H2400" stroke="#859398" stroke-opacity="0.18"/>
+
+  <rect x="100" y="96" width="52" height="4" fill="#85c3bf"/>
+  <text x="174" y="105" fill="#b8c6c8" font-family="Arial, sans-serif" font-size="16" font-weight="700">UAV TELEMETRY / EMBEDDED HARDWARE</text>
+  <text x="100" y="184" fill="#f5f6f4" font-family="Arial, sans-serif" font-size="54" font-weight="700">ESP32-C6 CAN TELEMETRY GATEWAY</text>
+  <text x="104" y="236" fill="#c0cbcd" font-family="Arial, sans-serif" font-size="25">ArduPilot / DroneCAN &#8226; Wi-Fi &#8226; MicroSD</text>
+  <g transform="translate(2070 118)">
+    <path d="M0 0H230V52H0Z" fill="#202a30" stroke="#718287" stroke-opacity="0.55"/>
+    <circle cx="19" cy="26" r="5" fill="#8fc8c5"/>
+    <text x="34" y="32" fill="#dbe3e2" font-family="Arial, sans-serif" font-size="16" font-weight="700">CURRENT HARDWARE</text>
+  </g>
+
+  <image x="510" y="350" width="1380" height="956" preserveAspectRatio="none" xlink:href="ESP32-C6-CAN-Telemetry-Gateway-board.png"/>
+
+  <g class="leader">
+    <path d="M420 624H575L724 635"/>
+    <path d="M420 792H560L680 800"/>
+    <path d="M1930 550H1810L1700 595"/>
+    <path d="M1930 680H1590L1245 685"/>
+    <path d="M1930 865H1520L947 715"/>
+    <path d="M1930 1020H1510L1033 815"/>
+    <path d="M1230 900V1360H1055"/>
+  </g>
+  <g>
+    <circle class="dot" cx="724" cy="635" r="6"/>
+    <circle class="dot" cx="680" cy="800" r="6"/>
+    <circle class="dot" cx="1700" cy="595" r="6"/>
+    <circle class="dot" cx="1245" cy="685" r="6"/>
+    <circle class="dot" cx="947" cy="715" r="6"/>
+    <circle class="dot" cx="1033" cy="815" r="6"/>
+    <circle class="dot" cx="1230" cy="900" r="6"/>
+  </g>
+
+  <g>
+    <text class="label" x="100" y="602">3.3 V REGULATOR</text>
+    <text class="detail" x="100" y="628">U2 &#183; TC2014-3.3V</text>
+    <text class="label" x="100" y="770">USB-C</text>
+    <text class="detail" x="100" y="796">J1 &#183; USB 2.0 receptacle</text>
+
+    <text class="label" x="1950" y="520">MICROSD</text>
+    <text class="detail" x="1950" y="546">J2 &#183; card socket</text>
+    <text class="label" x="1950" y="650">ESP32-C6FH4</text>
+    <text class="detail" x="1950" y="676">U1 &#183; wireless MCU</text>
+    <text class="label" x="1950" y="835">CAN TRANSCEIVER</text>
+    <text class="detail" x="1950" y="861">U3 &#183; TCAN332</text>
+    <text class="label" x="1950" y="990">CAN PROTECTION</text>
+    <text class="detail" x="1950" y="1016">D3 &#183; NUP2105L</text>
+
+    <text class="label" x="820" y="1406">CAN INTERFACE</text>
+    <text class="detail" x="820" y="1432">J3 &#183; CAN_H / CAN_L</text>
+  </g>
+  <text x="100" y="1560" fill="#91a0a4" font-family="Arial, sans-serif" font-size="14">POPULATED BOARD RENDERED FROM THE PROVIDED KICAD DESIGN</text>
+  <text x="2300" y="1560" text-anchor="end" fill="#91a0a4" font-family="Arial, sans-serif" font-size="14">HARDWARE VIEW</text>
+</svg>
