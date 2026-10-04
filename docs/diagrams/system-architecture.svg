@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1600" viewBox="0 0 2400 1600">
+  <defs>
+    <marker id="arrowHardware" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#147c78"/></marker>
+    <marker id="arrowPlanned" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#53758d"/></marker>
+    <style>
+      .eyebrow { font-family: Arial, sans-serif; font-size: 17px; font-weight: 700; fill: #527077; }
+      .title { font-family: Arial, sans-serif; font-size: 48px; font-weight: 700; fill: #172c35; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 23px; fill: #50656c; }
+      .section { font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; fill: #203840; }
+      .blockTitle { font-family: Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #1e333c; }
+      .blockSub { font-family: Arial, sans-serif; font-size: 15px; fill: #536970; }
+      .flowTitle { font-family: Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #1e333c; }
+      .flowSub { font-family: Arial, sans-serif; font-size: 14px; fill: #65767b; }
+      .status { font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; }
+      .wire { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="2400" height="1600" fill="#f7f8f5"/>
+  <path d="M0 0H2400V16H0Z" fill="#147c78"/>
+  <text class="eyebrow" x="92" y="84">SYSTEM OVERVIEW  /  ARDUPILOT TELEMETRY</text>
+  <text class="title" x="90" y="151">ESP32-C6 CAN Telemetry Gateway</text>
+  <text class="subtitle" x="94" y="194">CAN / DroneCAN acquisition with wireless uplink and local removable storage</text>
+  <path d="M90 226H2310" stroke="#d8dfdb" stroke-width="2"/>
+
+  <text class="section" x="90" y="280">SYSTEM INTERFACES</text>
+  <g transform="translate(1625 249)">
+    <rect width="288" height="42" rx="4" fill="#e4f1ed"/>
+    <circle cx="20" cy="21" r="5" fill="#147c78"/>
+    <text class="status" x="36" y="26" fill="#226c68">CURRENT HARDWARE</text>
+  </g>
+  <g transform="translate(1930 249)">
+    <rect width="380" height="42" rx="4" fill="#e9eff4"/>
+    <circle cx="20" cy="21" r="5" fill="#53758d"/>
+    <text class="status" x="36" y="26" fill="#496982">PLANNED SOFTWARE / CLOUD</text>
+  </g>
+
+  <rect x="80" y="316" width="1430" height="520" rx="8" fill="#edf4f1" stroke="#b8d0c9" stroke-width="2"/>
+  <rect x="1530" y="316" width="790" height="520" rx="8" fill="#eef2f5" stroke="#c6d3dc" stroke-width="2" stroke-dasharray="10 7"/>
+  <text class="section" x="112" y="359">CURRENT HARDWARE</text>
+  <text x="114" y="389" class="blockSub">Physical interfaces and fitted components in the supplied PCB design</text>
+  <text class="section" x="1562" y="359" fill="#496982">PLANNED SOFTWARE / CLOUD</text>
+  <text x="1564" y="389" class="blockSub">Proposed network services and application endpoints</text>
+
+  <rect x="110" y="467" width="290" height="158" rx="6" fill="#ffffff" stroke="#8da9a5" stroke-width="2"/>
+  <path d="M137 500h32v35h-32zM143 490v10m20-10v10m-20 36v9m20-9v9" fill="none" stroke="#147c78" stroke-width="3"/>
+  <text class="blockTitle" x="186" y="512">ArduPilot</text>
+  <text class="blockTitle" x="136" y="566">Flight Controller</text>
+  <text class="blockSub" x="136" y="593">CAN / DroneCAN source</text>
+
+  <path d="M400 548H470" class="wire" stroke="#147c78" marker-end="url(#arrowHardware)"/>
+  <path d="M458 540L470 548L458 556Z" fill="#147c78"/>
+
+  <rect x="480" y="421" width="820" height="364" rx="6" fill="#ffffff" stroke="#87aaa4" stroke-width="2"/>
+  <path d="M480 421h820v55H480z" fill="#dcece7"/>
+  <text class="blockTitle" x="510" y="456">ESP32-C6 CAN TELEMETRY GATEWAY</text>
+  <text class="blockSub" x="510" y="497">J3  ·  CAN interface  ·  CAN_H / CAN_L</text>
+
+  <rect x="510" y="520" width="235" height="104" rx="4" fill="#edf5f2" stroke="#a8c6bd"/>
+  <text class="blockTitle" x="530" y="560">CAN Protection</text>
+  <text class="blockSub" x="530" y="587">D3  ·  NUP2105L</text>
+  <rect x="770" y="520" width="220" height="104" rx="4" fill="#edf5f2" stroke="#a8c6bd"/>
+  <text class="blockTitle" x="790" y="560">CAN Transceiver</text>
+  <text class="blockSub" x="790" y="587">U3  ·  TCAN332</text>
+  <rect x="1015" y="520" width="252" height="104" rx="4" fill="#edf5f2" stroke="#a8c6bd"/>
+  <text class="blockTitle" x="1035" y="560">ESP32-C6FH4</text>
+  <text class="blockSub" x="1035" y="587">U1  ·  MCU / Wi-Fi radio</text>
+
+  <path d="M745 572H770" class="wire" stroke="#147c78"/>
+  <path d="M758 564L770 572L758 580Z" fill="#147c78"/>
+  <path d="M990 572H1015" class="wire" stroke="#147c78"/>
+  <path d="M1003 564L1015 572L1003 580Z" fill="#147c78"/>
+  <rect x="510" y="652" width="220" height="92" rx="4" fill="#edf5f2" stroke="#a8c6bd"/>
+  <text class="blockTitle" x="532" y="691">MicroSD</text>
+  <text class="blockSub" x="532" y="718">J2  ·  card socket</text>
+  <rect x="750" y="652" width="130" height="92" rx="4" fill="#edf5f2" stroke="#a8c6bd"/>
+  <text class="blockTitle" x="770" y="691">USB-C</text>
+  <text class="blockSub" x="770" y="718">J1</text>
+  <rect x="900" y="652" width="127" height="92" rx="4" fill="#edf5f2" stroke="#a8c6bd"/>
+  <text class="blockTitle" x="908" y="691">3.3 V Power</text>
+  <text class="blockSub" x="918" y="718">U2 regulator</text>
+  <rect x="1047" y="652" width="220" height="92" rx="4" fill="#edf5f2" stroke="#a8c6bd"/>
+  <text class="blockTitle" x="1069" y="691">Wi-Fi</text>
+  <text class="blockSub" x="1069" y="718">ESP32-C6 radio</text>
+  <path d="M1141 624V652" class="wire" stroke="#147c78"/>
+  <path d="M1133 640L1141 652L1149 640Z" fill="#147c78"/>
+
+  <rect x="1570" y="467" width="150" height="116" rx="4" fill="#ffffff" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+  <text class="blockTitle" x="1593" y="515">Internet</text>
+  <text class="blockSub" x="1593" y="543">uplink</text>
+  <path d="M1267 572H1558" class="wire" stroke="#53758d" stroke-dasharray="8 7"/>
+  <path d="M1546 564L1558 572L1546 580Z" fill="#53758d"/>
+  <text class="blockSub" x="1365" y="553">planned uplink</text>
+
+  <rect x="1750" y="467" width="220" height="116" rx="4" fill="#ffffff" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+  <text class="blockTitle" x="1772" y="515">Cloud Telemetry</text>
+  <text class="blockTitle" x="1772" y="540">Backend</text>
+  <path d="M1720 525H1750" class="wire" stroke="#53758d" stroke-dasharray="8 7" marker-end="url(#arrowPlanned)"/>
+  <path d="M1738 517L1750 525L1738 533Z" fill="#53758d"/>
+  <rect x="1990" y="467" width="125" height="116" rx="4" fill="#ffffff" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+  <text class="blockTitle" x="2008" y="525">Database</text>
+  <path d="M1970 525H1990" class="wire" stroke="#53758d" stroke-dasharray="8 7" marker-end="url(#arrowPlanned)"/>
+  <path d="M1978 517L1990 525L1978 533Z" fill="#53758d"/>
+  <rect x="2135" y="467" width="155" height="116" rx="4" fill="#ffffff" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+  <text class="blockTitle" x="2151" y="515">Web</text>
+  <text class="blockTitle" x="2151" y="540">Dashboard</text>
+  <path d="M2115 525H2135" class="wire" stroke="#53758d" stroke-dasharray="8 7" marker-end="url(#arrowPlanned)"/>
+  <path d="M2123 517L2135 525L2123 533Z" fill="#53758d"/>
+
+  <text class="blockSub" x="1572" y="633">Backend, database, and dashboard are planned endpoints.</text>
+  <text class="blockSub" x="1572" y="659">No cloud service is represented as installed on the PCB.</text>
+
+  <path d="M90 879H2310" stroke="#d8dfdb" stroke-width="2"/>
+  <text class="section" x="90" y="928">DATA PATHS</text>
+  <g transform="translate(2036 896)">
+    <rect width="274" height="38" rx="4" fill="#e9eff4"/>
+    <text class="status" x="17" y="25" fill="#496982">PLANNED DATA FLOW</text>
+  </g>
+
+  <text class="blockTitle" x="100" y="1004">1</text>
+  <text class="blockSub" x="127" y="1004">LIVE TELEMETRY UPLINK</text>
+  <g>
+    <rect x="100" y="1030" width="220" height="110" rx="5" fill="#e6f2ee" stroke="#81b1a7" stroke-width="2"/>
+    <text class="flowTitle" x="125" y="1077">CAN / DroneCAN</text>
+    <text class="flowSub" x="125" y="1105">current interface</text>
+    <rect x="400" y="1030" width="220" height="110" rx="5" fill="#e6f2ee" stroke="#81b1a7" stroke-width="2"/>
+    <text class="flowTitle" x="424" y="1077">ESP32-C6</text>
+    <text class="flowSub" x="424" y="1105">current hardware</text>
+    <rect x="700" y="1030" width="190" height="110" rx="5" fill="#e6f2ee" stroke="#81b1a7" stroke-width="2"/>
+    <text class="flowTitle" x="724" y="1077">Wi-Fi</text>
+    <text class="flowSub" x="724" y="1105">radio on MCU</text>
+    <rect x="970" y="1030" width="180" height="110" rx="5" fill="#eef2f5" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+    <text class="flowTitle" x="991" y="1077">Internet</text>
+    <text class="flowSub" x="991" y="1105">planned uplink</text>
+    <rect x="1230" y="1030" width="240" height="110" rx="5" fill="#eef2f5" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+    <text class="flowTitle" x="1253" y="1077">Cloud Backend</text>
+    <text class="flowSub" x="1253" y="1105">planned service</text>
+    <rect x="1550" y="1030" width="200" height="110" rx="5" fill="#eef2f5" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+    <text class="flowTitle" x="1573" y="1077">Database</text>
+    <text class="flowSub" x="1573" y="1105">planned service</text>
+    <rect x="1830" y="1030" width="260" height="110" rx="5" fill="#eef2f5" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+    <text class="flowTitle" x="1853" y="1077">Web Dashboard</text>
+    <text class="flowSub" x="1853" y="1105">planned application</text>
+    <path d="M320 1085H388M620 1085H688M890 1085H958M1150 1085H1218M1470 1085H1538M1750 1085H1818" class="wire" stroke="#53758d"/>
+    <path d="M388 1077L400 1085L388 1093ZM688 1077L700 1085L688 1093ZM958 1077L970 1085L958 1093ZM1218 1077L1230 1085L1218 1093ZM1538 1077L1550 1085L1538 1093ZM1818 1077L1830 1085L1818 1093Z" fill="#53758d"/>
+  </g>
+
+  <text class="blockTitle" x="100" y="1221">2</text>
+  <text class="blockSub" x="127" y="1221">LOCAL FLIGHT LOG</text>
+  <g>
+    <rect x="100" y="1247" width="270" height="110" rx="5" fill="#e6f2ee" stroke="#81b1a7" stroke-width="2"/>
+    <text class="flowTitle" x="125" y="1294">CAN / DroneCAN</text>
+    <text class="flowSub" x="125" y="1322">current interface</text>
+    <rect x="500" y="1247" width="280" height="110" rx="5" fill="#e6f2ee" stroke="#81b1a7" stroke-width="2"/>
+    <text class="flowTitle" x="525" y="1294">ESP32-C6</text>
+    <text class="flowSub" x="525" y="1322">current hardware</text>
+    <rect x="910" y="1247" width="260" height="110" rx="5" fill="#e6f2ee" stroke="#81b1a7" stroke-width="2"/>
+    <text class="flowTitle" x="935" y="1294">MicroSD</text>
+    <text class="flowSub" x="935" y="1322">current card socket</text>
+    <rect x="1300" y="1247" width="340" height="110" rx="5" fill="#eef2f5" stroke="#9eb2c0" stroke-width="2" stroke-dasharray="7 5"/>
+    <text class="flowTitle" x="1325" y="1294">Local Flight Log</text>
+    <text class="flowSub" x="1325" y="1322">planned firmware function</text>
+    <path d="M370 1302H488M780 1302H898M1170 1302H1288" class="wire" stroke="#53758d"/>
+    <path d="M488 1294L500 1302L488 1310ZM898 1294L910 1302L898 1310ZM1288 1294L1300 1302L1288 1310Z" fill="#53758d"/>
+  </g>
+
+  <path d="M90 1455H2310" stroke="#d8dfdb" stroke-width="2"/>
+  <circle cx="108" cy="1500" r="6" fill="#147c78"/>
+  <text class="blockSub" x="125" y="1505">Current hardware / interface</text>
+  <path d="M390 1500H430" stroke="#53758d" stroke-width="3" stroke-dasharray="7 5"/>
+  <text class="blockSub" x="444" y="1505">Planned software or cloud service</text>
+  <text x="2310" y="1505" text-anchor="end" class="blockSub">Architecture status shown explicitly; no additional interfaces implied.</text>
+</svg>

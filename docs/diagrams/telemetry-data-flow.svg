@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:42px;font-weight:700;fill:#172c35}.subtitle{font-family:Arial,sans-serif;font-size:19px;fill:#52676e}.head{font-family:Arial,sans-serif;font-size:18px;font-weight:700;fill:#1e343c}.small{font-family:Arial,sans-serif;font-size:14px;fill:#5f7278}.status{font-family:Arial,sans-serif;font-size:13px;font-weight:700}.current{fill:#e4f1ed;stroke:#81b1a7;stroke-width:2}.planned{fill:#eef2f5;stroke:#9eb2c0;stroke-width:2;stroke-dasharray:8 6}.wire{fill:none;stroke:#53758d;stroke-width:3;stroke-dasharray:8 7;stroke-linecap:round;stroke-linejoin:round}.arrow{fill:#53758d}
+    </style>
+  </defs>
+  <rect width="1800" height="1200" fill="#f7f8f5"/>
+  <rect width="1800" height="12" fill="#147c78"/>
+  <text class="title" x="80" y="85">Telemetry Data Flow</text>
+  <text class="subtitle" x="82" y="123">Proposed software pipeline · hardware endpoints are distinguished from unimplemented functions</text>
+  <path d="M80 155H1720" stroke="#d8dfdb" stroke-width="2"/>
+
+  <rect x="80" y="185" width="1640" height="90" rx="5" fill="#e9eff4"/>
+  <circle cx="110" cy="215" r="6" fill="#53758d"/>
+  <text class="status" x="128" y="220" fill="#496982">PLANNED SOFTWARE / CLOUD</text>
+  <text class="small" x="128" y="248">No firmware, cloud API, database, or dashboard implementation is included in this repository.</text>
+
+  <text class="head" x="95" y="340">CAN acquisition and decode</text>
+  <rect class="current" x="80" y="370" width="235" height="130" rx="6"/>
+  <text class="head" x="102" y="410">CAN Frames</text>
+  <text class="small" x="102" y="440">J3 · TCAN332 hardware</text>
+  <text class="status" x="102" y="475" fill="#236d68">CURRENT INTERFACE</text>
+
+  <rect class="planned" x="385" y="370" width="235" height="130" rx="6"/>
+  <text class="head" x="408" y="410">CAN Driver</text>
+  <text class="small" x="408" y="440">firmware task</text>
+  <text class="status" x="408" y="475" fill="#496982">PLANNED</text>
+
+  <rect class="planned" x="690" y="370" width="235" height="130" rx="6"/>
+  <text class="head" x="713" y="410">Frame Buffer</text>
+  <text class="small" x="713" y="440">queue / buffering logic</text>
+  <text class="status" x="713" y="475" fill="#496982">PLANNED</text>
+
+  <rect class="planned" x="995" y="370" width="235" height="130" rx="6"/>
+  <text class="head" x="1018" y="410">Telemetry Decoder</text>
+  <text class="small" x="1018" y="440">protocol processing</text>
+  <text class="status" x="1018" y="475" fill="#496982">PLANNED</text>
+
+  <rect class="planned" x="1300" y="370" width="235" height="130" rx="6"/>
+  <text class="head" x="1323" y="410">Data Model</text>
+  <text class="small" x="1323" y="440">decoded telemetry</text>
+  <text class="status" x="1323" y="475" fill="#496982">PLANNED</text>
+
+  <path class="wire" d="M315 455H373M620 455H678M925 455H983M1230 455H1288"/>
+  <path class="arrow" d="M373 447L385 455L373 463ZM678 447L690 455L678 463ZM983 447L995 455L983 463ZM1288 447L1300 455L1288 463Z"/>
+
+  <text class="head" x="95" y="595">Parallel local logging branch</text>
+  <rect class="planned" x="690" y="625" width="235" height="125" rx="6"/>
+  <text class="head" x="713" y="665">Raw CAN Logger</text>
+  <text class="small" x="713" y="695">firmware function</text>
+  <text class="status" x="713" y="727" fill="#496982">PLANNED</text>
+  <rect class="current" x="1050" y="625" width="235" height="125" rx="6"/>
+  <text class="head" x="1073" y="665">MicroSD Socket</text>
+  <text class="small" x="1073" y="695">J2 hardware</text>
+  <text class="status" x="1073" y="727" fill="#236d68">CURRENT HARDWARE</text>
+  <path class="wire" d="M808 500V612M925 687H1038"/>
+  <path class="arrow" d="M800 612L808 624L816 612ZM1038 679L1050 687L1038 695Z"/>
+  <text class="small" x="942" y="675">write planned</text>
+
+  <text class="head" x="95" y="840">Network delivery path</text>
+  <rect class="planned" x="140" y="870" width="235" height="125" rx="6"/>
+  <text class="head" x="163" y="910">Wi-Fi Transport</text>
+  <text class="small" x="163" y="940">ESP32-C6 radio available</text>
+  <text class="status" x="163" y="972" fill="#496982">FIRMWARE PLANNED</text>
+
+  <rect class="planned" x="445" y="870" width="235" height="125" rx="6"/>
+  <text class="head" x="468" y="910">Internet</text>
+  <text class="small" x="468" y="940">network uplink</text>
+  <text class="status" x="468" y="972" fill="#496982">PLANNED</text>
+
+  <rect class="planned" x="750" y="870" width="235" height="125" rx="6"/>
+  <text class="head" x="773" y="910">Cloud API</text>
+  <text class="small" x="773" y="940">endpoint / service</text>
+  <text class="status" x="773" y="972" fill="#496982">PLANNED</text>
+
+  <rect class="planned" x="1055" y="870" width="235" height="125" rx="6"/>
+  <text class="head" x="1078" y="910">Database</text>
+  <text class="small" x="1078" y="940">persistent backend</text>
+  <text class="status" x="1078" y="972" fill="#496982">PLANNED</text>
+
+  <rect class="planned" x="1360" y="870" width="235" height="125" rx="6"/>
+  <text class="head" x="1383" y="910">Web Dashboard</text>
+  <text class="small" x="1383" y="940">user interface</text>
+  <text class="status" x="1383" y="972" fill="#496982">PLANNED</text>
+
+  <path class="wire" d="M1417 500V820H257V858"/>
+  <path class="arrow" d="M249 850L257 862L265 850Z"/>
+  <path class="wire" d="M375 955H433M680 955H738M985 955H1043M1290 955H1348"/>
+  <path class="arrow" d="M433 947L445 955L433 963ZM738 947L750 955L738 963ZM1043 947L1055 955L1043 963ZM1348 947L1360 955L1348 963Z"/>
+
+  <path d="M80 1090H1720" stroke="#d8dfdb" stroke-width="2"/>
+  <circle cx="100" cy="1130" r="6" fill="#147c78"/>
+  <text class="small" x="117" y="1135">Physical hardware present</text>
+  <path d="M360 1130H402" stroke="#53758d" stroke-width="3" stroke-dasharray="8 6"/>
+  <text class="small" x="416" y="1135">Planned firmware or cloud service</text>
+  <text class="small" x="1720" y="1135" text-anchor="end">Conceptual pipeline; no implementation or test results implied.</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1450" viewBox="0 0 2200 1450">
+  <defs>
+    <style>
+      .title{font-family:Arial,sans-serif;font-size:44px;font-weight:700;fill:#172c35}.subtitle{font-family:Arial,sans-serif;font-size:20px;fill:#52676e}.section{font-family:Arial,sans-serif;font-size:22px;font-weight:700;fill:#1e343c}.head{font-family:Arial,sans-serif;font-size:20px;font-weight:700;fill:#1e343c}.body{font-family:Arial,sans-serif;font-size:16px;fill:#40565e}.small{font-family:Arial,sans-serif;font-size:14px;fill:#5f7278}.tag{font-family:Arial,sans-serif;font-size:14px;font-weight:700;fill:#236d68}.wire{fill:none;stroke:#147c78;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.arrow{fill:#147c78}.box{fill:#fff;stroke:#9db8b3;stroke-width:2}.soft{fill:#edf4f1;stroke:#bfd3cd;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="2200" height="1450" fill="#f7f8f5"/>
+  <rect width="2200" height="12" fill="#147c78"/>
+  <text class="title" x="80" y="88">Hardware Block Diagram</text>
+  <text class="subtitle" x="82" y="126">Interfaces and fitted circuitry from the ESP32-C6FH4 KiCad schematic</text>
+  <rect x="1820" y="55" width="300" height="42" rx="4" fill="#e4f1ed"/>
+  <circle cx="1842" cy="76" r="5" fill="#147c78"/>
+  <text class="tag" x="1860" y="81">CURRENT HARDWARE</text>
+  <path d="M80 160H2120" stroke="#d8dfdb" stroke-width="2"/>
+
+  <rect x="70" y="205" width="2060" height="1000" rx="8" fill="#edf4f1" stroke="#b8d0c9" stroke-width="2"/>
+  <text class="section" x="105" y="252">ESP32-C6 CAN TELEMETRY GATEWAY</text>
+  <text class="small" x="105" y="280">Hardware connectivity only; this drawing does not imply installed gateway firmware.</text>
+
+  <rect class="box" x="105" y="335" width="255" height="280" rx="6"/>
+  <text class="head" x="130" y="376">J3 · CAN</text>
+  <text class="body" x="130" y="422">Pin 1 · VBUS</text>
+  <text class="body" x="130" y="464">Pin 2 · CANH</text>
+  <text class="body" x="130" y="506">Pin 3 · CANL</text>
+  <text class="body" x="130" y="548">Pin 4 · GND</text>
+  <text class="small" x="130" y="586">4-position JST GH header</text>
+
+  <rect class="soft" x="435" y="365" width="330" height="220" rx="6"/>
+  <text class="head" x="460" y="407">CAN Protection</text>
+  <text class="body" x="460" y="448">D3 · NUP2105L</text>
+  <text class="small" x="460" y="477">CANH / CANL to GND</text>
+  <text class="body" x="460" y="524">R16 · 120 Ω</text>
+  <text class="small" x="460" y="552">across the CAN pair</text>
+
+  <rect class="box" x="835" y="365" width="285" height="220" rx="6"/>
+  <text class="head" x="860" y="407">U3 · TCAN332</text>
+  <text class="body" x="860" y="448">CAN transceiver</text>
+  <text class="small" x="860" y="482">CANH / CANL bus side</text>
+  <text class="small" x="860" y="516">TXD · GPIO14</text>
+  <text class="small" x="860" y="546">RXD · GPIO15</text>
+
+  <rect class="box" x="1190" y="325" width="490" height="300" rx="6"/>
+  <path d="M1190 325H1680V380H1190Z" fill="#dcece7"/>
+  <text class="head" x="1220" y="362">U1 · ESP32-C6FH4</text>
+  <text class="body" x="1220" y="420">MCU with integrated Wi-Fi radio</text>
+  <text class="body" x="1220" y="460">CAN TXD / RXD · GPIO14 / GPIO15</text>
+  <text class="body" x="1220" y="500">USB 2.0 D+ / D− · GPIO13 / GPIO12</text>
+  <text class="body" x="1220" y="540">MicroSD signals · SDIO-related GPIO</text>
+  <text class="small" x="1220" y="584">ANT path to AE2 · U.FL RF connector</text>
+
+  <rect class="box" x="1780" y="365" width="300" height="200" rx="6"/>
+  <text class="head" x="1805" y="407">J2 · MicroSD</text>
+  <text class="body" x="1805" y="448">Card socket</text>
+  <text class="small" x="1805" y="482">SDIO-related connections</text>
+  <text class="small" x="1805" y="512">DAT1 / DAT2 are NC</text>
+
+  <path class="wire" d="M360 464H435M360 506H435"/>
+  <path class="wire" d="M765 464H835M765 506H835"/>
+  <path class="wire" d="M1120 450H1190"/>
+  <path class="arrow" d="M1178 442L1190 450L1178 458Z"/>
+  <path class="wire" d="M1680 450H1780"/>
+  <path class="arrow" d="M1768 442L1780 450L1768 458Z"/>
+  <text class="small" x="1132" y="405">TXD / RXD</text>
+  <text class="small" x="1690" y="435">card I/O</text>
+
+  <rect class="box" x="105" y="700" width="300" height="180" rx="6"/>
+  <text class="head" x="130" y="742">J1 · USB-C</text>
+  <text class="body" x="130" y="783">USB 2.0 D+ / D−</text>
+  <text class="body" x="130" y="823">VBUS · GND</text>
+  <rect class="soft" x="485" y="700" width="310" height="180" rx="6"/>
+  <text class="head" x="510" y="742">U2 · TC2014</text>
+  <text class="body" x="510" y="783">3.3 V regulator</text>
+  <text class="small" x="510" y="823">VIN is on VBUS</text>
+  <rect class="soft" x="875" y="700" width="300" height="180" rx="6"/>
+  <text class="head" x="900" y="742">+3V3 Rail</text>
+  <text class="body" x="900" y="783">U1 · U3 · U4</text>
+  <text class="small" x="900" y="823">and connector/card supply</text>
+
+  <path class="wire" d="M405 780H485"/>
+  <path class="arrow" d="M473 772L485 780L473 788Z"/>
+  <path class="wire" d="M795 780H875"/>
+  <path class="arrow" d="M863 772L875 780L863 788Z"/>
+  <rect class="box" x="1250" y="700" width="830" height="180" rx="6"/>
+  <text class="head" x="1280" y="742">Auxiliary connectors</text>
+  <text class="body" x="1280" y="783">J4 · UART telemetry</text>
+  <text class="body" x="1530" y="783">J5 · I²C</text>
+  <text class="body" x="1730" y="783">J6 · External SPI</text>
+  <text class="small" x="1280" y="823">Connector labels identify the intended signals; firmware use is not included.</text>
+
+  <rect x="105" y="930" width="1975" height="205" rx="6" fill="#fff7e8" stroke="#e0c98f" stroke-width="2"/>
+  <text x="135" y="974" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#725319">Power and interface notes</text>
+  <text class="body" x="135" y="1015">J3 pin 1 VBUS and USB-C VBUS share the board VBUS net feeding U2. Check the system power scheme before connecting independent supplies.</text>
+  <text class="body" x="135" y="1053">The schematic names the bus nets CANH / CANL; R16 is a fitted 120 Ω shunt across those nets.</text>
+  <text class="body" x="135" y="1091">Board design callouts show a nominal 40 × 25 mm outline. No enclosure, environmental, or operational qualification is documented.</text>
+</svg>
