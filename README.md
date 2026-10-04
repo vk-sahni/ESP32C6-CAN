@@ -4,7 +4,7 @@
   <img src="docs/images/hero-product.png" width="850" alt="ESP32-C6 CAN Telemetry Gateway populated PCB render">
 </p>
 
-**An embedded CAN-to-IP telemetry gateway hardware design for UAVs and robotics.** The board is intended to sit alongside an ArduPilot flight controller, connect over CAN / DroneCAN, and provide hardware interfaces for Wi-Fi and MicroSD-based development.
+**A hardware design for an ESP32-C6 edge telemetry gateway for UAVs and robotics.** It is intended to sit alongside an ArduPilot flight controller and expose CAN / DroneCAN, Wi-Fi-capable MCU, USB-C, and MicroSD hardware interfaces. It is an auxiliary telemetry device, not a flight-controller replacement; gateway firmware and data services are not included.
 
 > **Project status:** This repository contains KiCad hardware design files and derived documentation assets. It does not include gateway firmware, a telemetry decoder, a cloud service, or a dashboard. Network telemetry and local flight logging are planned system uses, not implemented or tested features.
 
@@ -167,6 +167,14 @@ The KiCad project names are preserved. Custom ESP32-C6 footprint and symbol asse
 [Download the board assembly STEP model](docs/3d/ESP32-C6-CAN.step). It was exported from the supplied KiCad PCB and available 3D models. Component coverage depends on the 3D models present in the design; the STEP file is a design visualization, not a mechanical tolerance model.
 
 Editable diagrams are in [`docs/diagrams/`](docs/diagrams/): [system architecture](docs/diagrams/system-architecture.svg), [CAN interface](docs/diagrams/can-interface.svg), [hardware block diagram](docs/diagrams/hardware-block-diagram.svg), and [telemetry data flow](docs/diagrams/telemetry-data-flow.svg).
+
+## Releases and Packages
+
+There are no published versioned releases or GitHub Packages for this project yet. Use the [GitHub Releases page](https://github.com/vish-official-2525/ESP32C6-CAN/releases) to check for future tagged hardware snapshots.
+
+For this hardware project, a release archive is the appropriate distribution format for versioned KiCad sources and manufacturing exports such as Gerbers, drill files, BOM, and STEP. Those manufacturing bundles are not published yet. The current STEP model and KiCad sources remain available in this repository; there is no installable software package or firmware binary.
+
+The current PCB DRC and schematic-parity findings are recorded below. A tagged fabrication release should wait until those findings are reviewed and the design has an explicit validation status.
 
 ## Schematic Overview
 
